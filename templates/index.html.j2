@@ -12,18 +12,16 @@
 
   {% call forms.section(safety.title, "safety-card") %}
     <p>{{ safety.text }}</p>
-    <ul>
+    {% call forms.list() %}
       {% for rule in safety.rules %}
         <li>{{ rule }}</li>
       {% endfor %}
-    </ul>
+    {% endcall %}
   {% endcall %}
 
   {% call forms.section(quick_prompts.title, "quick-card") %}
     {% for item in quick_prompts['items'] %}
-      <button class="nes-btn is-primary quick-copy" type="button">
-        <span>{{ item }}</span>
-      </button>
+      {{ forms.button(item, class="quick-copy") }}
     {% endfor %}
   {% endcall %}
 

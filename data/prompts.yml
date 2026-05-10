@@ -25,12 +25,12 @@ safety:
 quick_prompts:
   title: "Najprostsze komendy ratunkowe"
   items:
-    - "Napisz to prościej."
-    - "Skróć odpowiedź."
-    - "Podaj przykład."
-    - "Wytłumacz krok po kroku."
-    - "Napisz większymi punktami."
-    - "Zadaj mi jedno pytanie naraz."
+    - "Napisz to prościej"
+    - "Skróć odpowiedź"
+    - "Podaj przykład"
+    - "Wytłumacz krok po kroku"
+    - "Napisz większymi punktami"
+    - "Zadaj mi jedno pytanie naraz"
 
 sections:
   - id: "pisanie"

@@ -1,4 +1,4 @@
-{% macro section(title, class) -%}
+{% macro section(title, class) %}
   <section class="nes-container with-title {{ class }}"
            aria-labelledby="{{ class }}-title">
     <h2 id="{{ class }}-title" class="title">{{ title }}</h2>
@@ -6,4 +6,23 @@
       {{ caller() }}
     </div>
   </section>
-{%- endmacro %}
+{% endmacro %}
+
+{% macro button(title, class="", type="is-primary") %}
+  {# is-primary #}
+  {# is-success #}
+  {# is-warning #}
+  {# is-error #}
+  {# is-disabled #}
+  <button class="nes-btn {{ type }} {{ class }}" type="button">
+    <span>{{ title }}</span>
+  </button>
+{% endmacro %}
+
+{% macro list(type='is-circle') %}
+  {# is-circle #}
+  {# is-disk #}
+  <ul class="nes-list {{ type }}">
+    {{ caller() }}
+  </ul>
+{% endmacro %}
