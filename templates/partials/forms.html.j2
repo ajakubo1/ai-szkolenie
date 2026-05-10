@@ -1,7 +1,8 @@
-{% macro section(title, class, is_dark=false) %}
-  <section class="nes-container with-title {{ class }} {{ 'is-dark' if is_dark }}"
-           aria-labelledby="{{ class }}-title">
-    <h2 id="{{ class }}-title" class="title">{{ title }}</h2>
+{% macro section(title, id, is_dark=false, is_rounded=false) %}
+  <section id="{{ id }}"
+           class="nes-container with-title {{ id }} {{ 'is-dark' if is_dark }} {{ 'is-rounded' if is_rounded }}"
+           aria-labelledby="{{ id }}-title">
+    <h2 id="{{ id }}-title" class="title">{{ title }}</h2>
     <div class="content">
       {{ caller() }}
     </div>

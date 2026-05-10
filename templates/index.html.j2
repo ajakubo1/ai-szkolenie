@@ -35,10 +35,8 @@
     {% endcall %}
   {% endcall %}
 
-  {% call forms.section("", "sections") %}
-    {% for section in sections %}
-      {% include "partials/prompt_section.html.j2" %}
-    {% endfor %}
-  {% endcall %}
+  {% for section in sections %}
+    {% include "partials/prompt_section.html.j2" %}
+  {% endfor %}
 
 {% endblock %}
