@@ -69,8 +69,14 @@ header.sticky .nav-brand p {
 }
 
 /* Main */
-.main-content {
+#main {
+    margin-top: 2rem;
     margin-bottom: 4rem;
+}
+
+section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
