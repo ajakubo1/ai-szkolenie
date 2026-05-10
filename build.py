@@ -37,9 +37,6 @@ def render_index(data):
     )
 
     template = env.get_template("index.html.j2")
-    from pprint import pprint
-
-    pprint(data)
     html = template.render(**data)
 
     output_file = DIST_DIR / "index.html"
