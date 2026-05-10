@@ -1,0 +1,12 @@
+<section class="prompt-section" id="{{ section.id }}">
+  <div class="section-heading">
+    <h2>{{ section.title }}</h2>
+    <p>{{ section.description }}</p>
+  </div>
+
+  <div class="prompt-grid">
+    {% for prompt in section.prompts %}
+      {% include "partials/prompt_card.html.j2" %}
+    {% endfor %}
+  </div>
+</section>

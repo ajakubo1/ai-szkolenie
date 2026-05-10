@@ -1,0 +1,186 @@
+site:
+  title: "AI instrukcje"
+  subtitle: "Gotowe prompty do skopiowania i wklejenia do ChatGPT"
+  footer_text: "Materiały szkoleniowe: AI instrukcje"
+
+intro:
+  title: "Jak korzystać?"
+  steps:
+    - "Wybierz sytuację."
+    - "Kliknij przycisk „Kopiuj prompt”."
+    - "Otwórz ChatGPT na telefonie."
+    - "Wklej prompt i uzupełnij nawiasy."
+    - "Poproś AI o poprawki, jeśli odpowiedź nie jest idealna."
+
+safety:
+  title: "Ważne bezpieczeństwo"
+  text: "Nie wpisuj do AI: PESEL-u, haseł, kodów SMS, kodów BLIK, numeru karty, danych logowania ani pełnych danych osobowych."
+  rules:
+    - "Nie podawaj danych logowania."
+    - "Nie wpisuj numeru PESEL."
+    - "Nie wpisuj numeru karty płatniczej."
+    - "Nie wklejaj kodów SMS ani BLIK."
+    - "Przy sprawach zdrowotnych, prawnych i finansowych sprawdzaj informacje u specjalisty albo w oficjalnym źródle."
+
+quick_prompts:
+  title: "Najprostsze komendy ratunkowe"
+  items:
+    - "Napisz to prościej."
+    - "Skróć odpowiedź."
+    - "Podaj przykład."
+    - "Wytłumacz krok po kroku."
+    - "Napisz większymi punktami."
+    - "Zadaj mi jedno pytanie naraz."
+
+sections:
+  - id: "pisanie"
+    title: "Pisanie wiadomości"
+    description: "Prompty do SMS-ów, e-maili, życzeń i prostych tekstów."
+    prompts:
+      - number: 1
+        title: "SMS do rodziny"
+        when: "Użyj, gdy chcesz napisać krótką, serdeczną wiadomość."
+        text: |
+          Napisz krótkiego, ciepłego SMS-a do [kogo].
+          Chcę powiedzieć, że [co chcesz powiedzieć].
+          Niech wiadomość będzie serdeczna i naturalna.
+
+      - number: 2
+        title: "Życzenia urodzinowe"
+        when: "Użyj, gdy chcesz przygotować życzenia dla bliskiej osoby."
+        text: |
+          Napisz życzenia urodzinowe dla [wnuczki / wnuka / córki / kolegi].
+          Mają być ciepłe, niezbyt długie i bez przesadnego patosu.
+          Dodaj coś osobistego: [np. życzę Ci odwagi, zdrowia, radości].
+
+      - number: 3
+        title: "Poprawienie tekstu"
+        when: "Użyj, gdy masz już tekst, ale chcesz, żeby był jaśniejszy i bardziej uprzejmy."
+        text: |
+          Popraw poniższy tekst, żeby był bardziej zrozumiały, uprzejmy i poprawny językowo.
+          Nie zmieniaj sensu.
+
+          Oto tekst:
+          [wklej tekst]
+
+  - id: "urzedy"
+    title: "Urzędy i pisma"
+    description: "Prompty do wyjaśniania trudnych pism, regulaminów i wiadomości."
+    prompts:
+      - number: 4
+        title: "Wyjaśnienie trudnego pisma"
+        when: "Użyj, gdy chcesz zrozumieć pismo, regulamin albo komunikat."
+        text: |
+          Wytłumacz mi poniższy tekst prostym językiem.
+          Napisz:
+          1. O co chodzi?
+          2. Czy muszę coś zrobić?
+          3. Jaki jest termin?
+          4. Na co powinienem/powinnam uważać?
+
+          Tekst:
+          [wklej tekst bez danych osobowych]
+
+      - number: 5
+        title: "E-mail do urzędu albo administracji"
+        when: "Użyj, gdy chcesz napisać formalną, spokojną wiadomość."
+        text: |
+          Pomóż mi napisać uprzejmy i formalny e-mail.
+
+          Piszę do: [urząd / administracja / spółdzielnia / firma]
+          Sprawa dotyczy: [opisz sprawę]
+          Chcę poprosić o: [czego oczekujesz]
+
+          Napisz krótko, jasno i spokojnie.
+
+  - id: "bezpieczenstwo"
+    title: "Bezpieczeństwo w internecie"
+    description: "Prompty pomagające ocenić podejrzane SMS-y, e-maile i telefony."
+    prompts:
+      - number: 6
+        title: "Sprawdzenie podejrzanego SMS-a"
+        when: "Użyj, gdy dostaniesz wiadomość z linkiem, dopłatą, bankiem albo paczką."
+        text: |
+          Dostałem/dostałam taki SMS.
+          Czy wygląda podejrzanie?
+          Wyjaśnij prostym językiem, na co uważać.
+          Nie klikam linków i nie podaję kodów.
+
+          Treść SMS-a:
+          [wklej wiadomość bez danych osobowych]
+
+      - number: 7
+        title: "Podejrzany telefon"
+        when: "Użyj, gdy ktoś dzwoni i prosi o pieniądze, kod BLIK albo dane."
+        text: |
+          Ktoś zadzwonił i powiedział: [opisz sytuację].
+          Prosił o: [pieniądze / kod BLIK / dane / przelew].
+
+          Pomóż mi ocenić, czy to może być oszustwo.
+          Napisz, co powinienem/powinnam zrobić bezpiecznie krok po kroku.
+
+  - id: "zdrowie"
+    title: "Zdrowie — przygotowanie do wizyty"
+    description: "Prompty bez diagnozowania, do przygotowania pytań i uporządkowania informacji."
+    prompts:
+      - number: 8
+        title: "Pytania do lekarza"
+        when: "Użyj przed wizytą lekarską, żeby niczego nie zapomnieć."
+        text: |
+          Pomóż mi przygotować się do wizyty u lekarza.
+          Nie stawiaj diagnozy.
+          Pomóż mi tylko uporządkować informacje i przygotować pytania.
+
+          Temat wizyty albo objawy:
+          [opisz krótko]
+
+          Napisz listę pytań do lekarza.
+
+  - id: "telefon"
+    title: "Telefon i komputer"
+    description: "Prompty do prostych instrukcji krok po kroku."
+    prompts:
+      - number: 9
+        title: "Instrukcja obsługi telefonu"
+        when: "Użyj, gdy chcesz dowiedzieć się, jak coś zrobić na telefonie."
+        text: |
+          Wytłumacz mi krok po kroku, jak zrobić na telefonie: [czynność].
+          Mam telefon: [Android / iPhone / nie wiem].
+          Pisz bardzo prosto.
+          Po każdym kroku napisz, co powinienem/powinnam zobaczyć na ekranie.
+
+  - id: "dom"
+    title: "Dom, zakupy i gotowanie"
+    description: "Prompty do codziennych spraw domowych."
+    prompts:
+      - number: 10
+        title: "Obiad z tego, co mam w domu"
+        when: "Użyj, gdy chcesz prosty przepis z dostępnych składników."
+        text: |
+          Zaproponuj prosty obiad z tych składników:
+          [wypisz składniki]
+
+          Danie ma być łatwe, niedrogie i niezbyt czasochłonne.
+          Podaj przepis krok po kroku.
+
+  - id: "hobby"
+    title: "Hobby i wspomnienia"
+    description: "Prompty do nauki, pisania wspomnień i rozwijania zainteresowań."
+    prompts:
+      - number: 11
+        title: "Spisywanie wspomnień"
+        when: "Użyj, gdy chcesz zacząć pisać wspomnienia dla rodziny."
+        text: |
+          Pomóż mi spisać wspomnienia dla rodziny.
+          Zadawaj mi po jednym pytaniu.
+          Po mojej odpowiedzi pomóż mi ułożyć ją w ładny, prosty tekst.
+          Zacznij od dzieciństwa.
+
+      - number: 12
+        title: "Nauka języka"
+        when: "Użyj, gdy chcesz poćwiczyć język obcy."
+        text: |
+          Bądź moim cierpliwym nauczycielem języka [język].
+          Jestem osobą początkującą.
+          Naucz mnie 10 przydatnych zwrotów w podróży.
+          Potem zrób krótkie ćwiczenie.

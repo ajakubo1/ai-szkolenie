@@ -1,0 +1,18 @@
+<article class="prompt-card">
+  <div class="prompt-card-header">
+    <span class="prompt-number">Prompt {{ prompt.number }}</span>
+    <h3>{{ prompt.title }}</h3>
+  </div>
+
+  <p class="prompt-when">
+    {{ prompt.when }}
+  </p>
+
+  <div class="prompt-text-wrapper">
+    <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
+  </div>
+
+  <button class="copy-button" type="button">
+    Kopiuj prompt
+  </button>
+</article>

@@ -1,0 +1,45 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+
+  <section class="intro-card">
+    <h2>{{ intro.title }}</h2>
+
+    <ol class="steps-list">
+      {% for step in intro.steps %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  {% include "partials/safety_box.html.j2" %}
+
+  <section class="quick-card">
+    <h2>{{ quick_prompts.title }}</h2>
+
+    <div class="quick-grid">
+      {% for item in quick_prompts['items'] %}
+        <button class="quick-copy" type="button">
+          <span>{{ item }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </section>
+
+  <nav class="section-nav" aria-label="Kategorie promptów">
+    <h2>Kategorie</h2>
+
+    <ul>
+      {% for section in sections %}
+        <li>
+          <a href="#{{ section.id }}">{{ section.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for section in sections %}
+    {% include "partials/prompt_section.html.j2" %}
+  {% endfor %}
+
+{% endblock %}
