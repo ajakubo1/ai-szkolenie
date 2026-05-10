@@ -1,8 +1,9 @@
-{% macro section(title, id, is_dark=false, is_rounded=false) %}
+{% macro section(title, id, class='', is_dark=false, is_rounded=false) %}
   <section id="{{ id }}"
-           class="nes-container with-title {{ id }} {{ 'is-dark' if is_dark }} {{ 'is-rounded' if is_rounded }}"
+           class="nes-container with-title {{ id }} {{ class }} {{ 'is-dark' if is_dark }} {{ 'is-rounded' if is_rounded }}"
            aria-labelledby="{{ id }}-title">
-    <h2 id="{{ id }}-title" class="title">{{ title }}</h2>
+    <div class="title">
+      <h2 id="{{ id }}-title"><a href="#{{ id }}">#</a>{{ title }}</h2></div>
     <div class="content">
       {{ caller() }}
     </div>
@@ -24,4 +25,15 @@
   <ul class="nes-list {{ 'is-circle' if is_circle else 'is-disc' }}">
     {{ caller() }}
   </ul>
+{% endmacro %}
+
+
+{% macro table() %}
+  <div class="nes-table-responsive">
+    <table class="nes-table is-bordered is-centered">
+      <tbody>
+      {{ caller() }}
+      </tbody>
+    </table>
+  </div>
 {% endmacro %}

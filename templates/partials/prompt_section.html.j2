@@ -1,8 +1,6 @@
 {% call forms.section(section.title, section.id, is_rounded=true) %}
   <p>{{ section.description }}</p>
-  <div class="prompt-grid">
-    {% for prompt in section.prompts %}
-      {% include "partials/prompt_card.html.j2" %}
-    {% endfor %}
-  </div>
+  {% for prompt in section.prompts %}
+    {% include "partials/prompt_card.html.j2" %}
+  {% endfor %}
 {% endcall %}

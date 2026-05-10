@@ -1,18 +1,12 @@
-<article class="prompt-card">
-  <div class="prompt-card-header">
-    <span class="prompt-number">Prompt {{ prompt.number }}</span>
-    <h3>{{ prompt.title }}</h3>
-  </div>
-
+{% call forms.section(prompt.title, "prompt-number-" ~ prompt.number, class="prompt-card") %}
+  <span class="prompt-number">Prompt {{ prompt.number }}</span>
   <p class="prompt-when">
     {{ prompt.when }}
   </p>
-
-  <div class="prompt-text-wrapper">
-    <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
+  <div class="nes-input is-success">
+    <div class="prompt-text-wrapper">
+      <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
+    </div>
+    {{ forms.button("Kopiuj prompt", class="copy-button") }}
   </div>
-
-  <button class="copy-button" type="button">
-    Kopiuj prompt
-  </button>
-</article>
+{% endcall %}
