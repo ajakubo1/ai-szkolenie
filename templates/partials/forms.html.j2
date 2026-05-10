@@ -1,5 +1,5 @@
-{% macro section(title, class) %}
-  <section class="nes-container with-title {{ class }}"
+{% macro section(title, class, is_dark=false) %}
+  <section class="nes-container with-title {{ class }} {{ 'is-dark' if is_dark }}"
            aria-labelledby="{{ class }}-title">
     <h2 id="{{ class }}-title" class="title">{{ title }}</h2>
     <div class="content">
@@ -19,10 +19,8 @@
   </button>
 {% endmacro %}
 
-{% macro list(type='is-circle') %}
-  {# is-circle #}
-  {# is-disk #}
-  <ul class="nes-list {{ type }}">
+{% macro list(is_circle=true) %}
+  <ul class="nes-list {{ 'is-circle' if is_circle else 'is-disc' }}">
     {{ caller() }}
   </ul>
 {% endmacro %}

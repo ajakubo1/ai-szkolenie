@@ -25,20 +25,20 @@
     {% endfor %}
   {% endcall %}
 
-  <nav class="section-nav" aria-label="Kategorie promptów">
-    <h2>Kategorie</h2>
-
-    <ul>
+  {% call forms.section("Kategorie promptów", "category-card") %}
+    {% call forms.list(is_circle=false) %}
       {% for section in sections %}
         <li>
           <a href="#{{ section.id }}">{{ section.title }}</a>
         </li>
       {% endfor %}
-    </ul>
-  </nav>
+    {% endcall %}
+  {% endcall %}
 
-  {% for section in sections %}
-    {% include "partials/prompt_section.html.j2" %}
-  {% endfor %}
+  {% call forms.section("", "sections") %}
+    {% for section in sections %}
+      {% include "partials/prompt_section.html.j2" %}
+    {% endfor %}
+  {% endcall %}
 
 {% endblock %}
