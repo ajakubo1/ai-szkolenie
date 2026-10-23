@@ -60,6 +60,43 @@ code {
     text-wrap: wrap;
 }
 
+.prompt-markdown {
+    overflow-wrap: anywhere;
+}
+
+.prompt-markdown > :first-child {
+    margin-top: 0;
+}
+
+.prompt-markdown > :last-child {
+    margin-bottom: 0;
+}
+
+.prompt-markdown h1,
+.prompt-markdown h2,
+.prompt-markdown h3,
+.prompt-markdown h4,
+.prompt-markdown h5,
+.prompt-markdown h6 {
+    line-height: 1.1;
+}
+
+.prompt-markdown ul,
+.prompt-markdown ol {
+    padding-left: 2rem;
+}
+
+.prompt-markdown blockquote {
+    border-left: 4px solid #d3d3d3;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+.prompt-markdown pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
 
 /* Footer */
 footer {

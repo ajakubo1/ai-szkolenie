@@ -5,7 +5,11 @@
   </p>
   <div class="nes-input is-success">
     <div class="prompt-text-wrapper">
-      <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
+      {% if prompt.markdown_html %}
+        <div class="prompt-text prompt-markdown">{{ prompt.markdown_html }}</div>
+      {% else %}
+        <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
+      {% endif %}
     </div>
     {{ forms.button("Kopiuj prompt", class="copy-button") }}
   </div>
