@@ -1,4 +1,4 @@
-{% call forms.section(section.title, section.id, no_border=true) %}
+{% call forms.section(section.title, section.id, is_border=false) %}
   <p>{{ section.description }}</p>
   {% for prompt in section.prompts %}
     {% include "partials/prompt_card.html.j2" %}

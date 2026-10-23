@@ -10,7 +10,7 @@
     </ol>
   {% endcall %}
 
-  {% call forms.section(safety.title, "safety-card") %}
+  {% call forms.section(safety.title, "safety-card", color='red') %}
     <p>{{ safety.text }}</p>
     {% call forms.list() %}
       {% for rule in safety.rules %}

@@ -1,9 +1,14 @@
-{% macro section(title, id, class='', is_dark=false, no_border=false) %}
+{% macro section(title, id, class='', is_dark=false, is_border=true, color='default') %}
   <section id="{{ id }}"
-           class="{{ 'nes-container' if not no_border }} with-title {{ id }} {{ class }} {{ 'is-dark' if is_dark }}"
+           class="{{ 'nes-container' if is_border }} with-title {{ id }} {{ class }}
+               {{ 'is-dark' if color == 'dark' }}
+               {{ 'is-green' if color == 'green' }}
+               {{ 'is-red' if color == 'red' }}
+               {{ 'is-yellow' if color == 'yellow' }}"
            aria-labelledby="{{ id }}-title">
     <div class="title">
-      <h2 id="{{ id }}-title"><a href="#{{ id }}">#</a>{{ title }}</h2></div>
+      <h2 id="{{ id }}-title"><a href="#{{ id }}">#<span>{{ title }}</span></a></h2>
+    </div>
     <div class="content">
       {{ caller() }}
     </div>

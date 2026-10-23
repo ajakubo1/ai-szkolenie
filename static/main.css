@@ -39,19 +39,71 @@ header {
 
 */
 
-.nes-container {
-    .is-green {
+.is-green {
+    &, &::before, &::after {
         border-color: #76c442;
     }
 
-    .is-yellow {
+    a, .title {
+        color: #76c442;
+    }
+}
+
+.is-yellow {
+    &, &::before, &::after {
         border-color: #f2c409;
     }
 
-    .is-red {
-        border-color: #ce372b;
+    a, .title {
+        color: #f2c409;
     }
 }
+
+.is-red {
+    &, &::before, &::after {
+        border-color: #ce372b;
+    }
+
+    a {
+        color: rgb(from #ce372b r g b / 0.75);
+
+        & > span {
+            color: #ce372b;
+        }
+    }
+}
+
+.nes-pixel-borders {
+    border-style: none;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+    }
+
+    &::before {
+
+        top: -4px;
+        left: 0;
+        border-top-width: 4px;
+        border-top-style: solid;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+    }
+
+    &::after {
+        left: -4px;
+        top: 0;
+        border-left-width: 4px;
+        border-left-style: solid;
+        border-right-width: 4px;
+        border-right-style: solid;
+    }
+}
+
 
 section > .title > * {
     margin-top: -0.4rem;
