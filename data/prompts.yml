@@ -130,10 +130,15 @@ sections:
           Pomóż mi ocenić, czy to może być oszustwo.
           Napisz, co powinienem/powinnam zrobić bezpiecznie krok po kroku.
 
-      - number: 203
+      - number: 303
         title: "Analiza oszustwa z blikiem"
         when: "Znalazłeś informacje na temat nowego rodzaju oszustwa. Przeanalizuj widomość razem z AI żeby dowiedzieć się więcej."
         markdown_file: "prompts/proba-oszustwa.md"
+
+      - number: 304
+        title: "Szkolenie z bezpieczeństwa"
+        when: "Poproś chata o szkolenie z rozpoznawania oszustw w internecie."
+        markdown_file: "prompts/trener-oszustw.md"
 
   - id: "zdrowie"
     title: "Zdrowie — przygotowanie do wizyty"
