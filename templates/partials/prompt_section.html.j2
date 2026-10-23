@@ -1,5 +1,5 @@
 {% call forms.section(section.title, section.id, is_border=false) %}
-  <p>{{ section.description }}</p>
+  <p class="margin">{{ section.description }}</p>
   {% for prompt in section.prompts %}
     {% include "partials/prompt_card.html.j2" %}
   {% endfor %}

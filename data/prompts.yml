@@ -140,34 +140,11 @@ sections:
           Pisz bardzo prosto.
           Po każdym kroku napisz, co powinienem/powinnam zobaczyć na ekranie.
 
-  - id: "dom"
-    title: "Dom, zakupy i gotowanie"
-    description: "Prompty do codziennych spraw domowych."
-    prompts:
-      - number: 10
-        title: "Obiad z tego, co mam w domu"
-        when: "Użyj, gdy chcesz prosty przepis z dostępnych składników."
-        text: |
-          Zaproponuj prosty obiad z tych składników:
-          [wypisz składniki]
-
-          Danie ma być łatwe, niedrogie i niezbyt czasochłonne.
-          Podaj przepis krok po kroku.
-
-  - id: "hobby"
-    title: "Hobby i wspomnienia"
+  - id: "nauka"
+    title: "Zainteresowania i nauka"
     description: "Prompty do nauki, pisania wspomnień i rozwijania zainteresowań."
     prompts:
-      - number: 11
-        title: "Spisywanie wspomnień"
-        when: "Użyj, gdy chcesz zacząć pisać wspomnienia dla rodziny."
-        text: |
-          Pomóż mi spisać wspomnienia dla rodziny.
-          Zadawaj mi po jednym pytaniu.
-          Po mojej odpowiedzi pomóż mi ułożyć ją w ładny, prosty tekst.
-          Zacznij od dzieciństwa.
-
-      - number: 12
+      - number: 10
         title: "Nauka języka"
         when: "Użyj, gdy chcesz poćwiczyć język obcy."
         text: |
