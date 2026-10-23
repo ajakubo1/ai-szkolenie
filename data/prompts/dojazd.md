@@ -1,0 +1,2 @@
+Wybieramy się z rodziną za granicę na Maltę. Będziemy mieszkać w pobliżu przystanku autobusowego "Bieb". Czy możesz mi powiedzieć, jak mogę kupić bilet na autobus linii 214 (z lotniska)? Wydaje mi
+się, że to właśnie tym autobusem mogę dojechać bezpośrednio do hotelu.
