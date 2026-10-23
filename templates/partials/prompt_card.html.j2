@@ -1,6 +1,6 @@
 {% call forms.section(prompt.title, "prompt-number-" ~ prompt.number, class="prompt-card", color='green', is_partial=true) %}
   <p class="prompt-when">
-    {{ prompt.when }}
+    {{ prompt.when|safe }}
   </p>
   <div class="nes-container nes-pixel-borders is-green">
     <div class="prompt-text-wrapper">

@@ -37,7 +37,7 @@ sections:
     title: "Pisanie wiadomości"
     description: "Prompty do SMS-ów, e-maili, życzeń i prostych tekstów."
     prompts:
-      - number: 1
+      - number: 100
         title: "SMS do rodziny"
         when: "Użyj, gdy chcesz napisać krótką, serdeczną wiadomość."
         text: |
@@ -45,7 +45,7 @@ sections:
           Chcę powiedzieć, że [co chcesz powiedzieć].
           Niech wiadomość będzie serdeczna i naturalna.
 
-      - number: 2
+      - number: 102
         title: "Życzenia urodzinowe"
         when: "Użyj, gdy chcesz przygotować życzenia dla bliskiej osoby."
         text: |
@@ -53,7 +53,7 @@ sections:
           Mają być ciepłe, niezbyt długie i bez przesadnego patosu.
           Dodaj coś osobistego: [np. życzę Ci odwagi, zdrowia, radości].
 
-      - number: 3
+      - number: 103
         title: "Poprawienie tekstu"
         when: "Użyj, gdy masz już tekst, ale chcesz, żeby był jaśniejszy i bardziej uprzejmy."
         text: |
@@ -63,16 +63,26 @@ sections:
           Oto tekst:
           [wklej tekst]
 
+      - number: 104
+        title: "Kozacy"
+        when: "Przykład redagowania odpowiedzi na list od Sułtana"
+        markdown_file: "prompts/kozacy.md"
+
+      - number: 105
+        title: "Pretensje sąsiedzkie"
+        when: "Przykład z konfliktu sąsiedzkiego: <a href=\"https://www.ewarszawa.pl/news-news-232\">https://www.ewarszawa.pl/news-news-232</a>"
+        markdown_file: "prompts/pretensje.md"
+
   - id: "urzedy"
     title: "Urzędy i pisma"
     description: "Prompty do wyjaśniania trudnych pism, regulaminów i wiadomości."
     prompts:
-      - number: 4
+      - number: 201
         title: "Wyjaśnienie trudnego pisma"
         when: "Użyj, gdy chcesz zrozumieć pismo, regulamin albo komunikat."
         markdown_file: "prompts/wyjasnienie-trudnego-pisma.md"
 
-      - number: 5
+      - number: 202
         title: "E-mail do urzędu albo administracji"
         when: "Użyj, gdy chcesz napisać formalną, spokojną wiadomość."
         text: |
@@ -84,11 +94,21 @@ sections:
 
           Napisz krótko, jasno i spokojnie.
 
+      - number: 203
+        title: "Analiza umowy"
+        when: "Użyj, gdy chcesz zrozumieć dokument umowy (np. <a href=\"https://samorzad.gov.pl/attachment/03a2cb18-3b97-4d07-b7c9-d26b7dabb1ed\">https://samorzad.gov.pl/attachment/03a2cb18-3b97-4d07-b7c9-d26b7dabb1ed</a>)"
+        markdown_file: "prompts/analiza-dokumentow.md"
+
+      - number: 204
+        title: "Wyjaśnienie trudnego pisma 2"
+        when: "Alternatywa dla poprzednich instrukcji"
+        markdown_file: "prompts/prostsze-dokumenty.md"
+
   - id: "bezpieczenstwo"
     title: "Bezpieczeństwo w internecie"
     description: "Prompty pomagające ocenić podejrzane SMS-y, e-maile i telefony."
     prompts:
-      - number: 6
+      - number: 301
         title: "Sprawdzenie podejrzanego SMS-a"
         when: "Użyj, gdy dostaniesz wiadomość z linkiem, dopłatą, bankiem albo paczką."
         text: |
@@ -100,7 +120,7 @@ sections:
           Treść SMS-a:
           [wklej wiadomość bez danych osobowych]
 
-      - number: 7
+      - number: 302
         title: "Podejrzany telefon"
         when: "Użyj, gdy ktoś dzwoni i prosi o pieniądze, kod BLIK albo dane."
         text: |
@@ -110,11 +130,16 @@ sections:
           Pomóż mi ocenić, czy to może być oszustwo.
           Napisz, co powinienem/powinnam zrobić bezpiecznie krok po kroku.
 
+      - number: 203
+        title: "Analiza oszustwa z blikiem"
+        when: "Znalazłeś informacje na temat nowego rodzaju oszustwa. Przeanalizuj widomość razem z AI żeby dowiedzieć się więcej."
+        markdown_file: "prompts/proba-oszustwa.md"
+
   - id: "zdrowie"
     title: "Zdrowie — przygotowanie do wizyty"
     description: "Prompty bez diagnozowania, do przygotowania pytań i uporządkowania informacji."
     prompts:
-      - number: 8
+      - number: 401
         title: "Pytania do lekarza"
         when: "Użyj przed wizytą lekarską, żeby niczego nie zapomnieć."
         text: |
@@ -131,12 +156,21 @@ sections:
     title: "Telefon i komputer"
     description: "Prompty do prostych instrukcji krok po kroku."
     prompts:
-      - number: 9
+      - number: 501
         title: "Instrukcja obsługi telefonu"
         when: "Użyj, gdy chcesz dowiedzieć się, jak coś zrobić na telefonie."
         text: |
           Wytłumacz mi krok po kroku, jak zrobić na telefonie: [czynność].
-          Mam telefon: [Android / iPhone / nie wiem].
+          Mam telefon: Android.
+          Pisz bardzo prosto.
+          Po każdym kroku napisz, co powinienem/powinnam zobaczyć na ekranie.
+
+      - number: 502
+        title: "Instrukcja obsługi telefonu"
+        when: "Użyj, gdy chcesz dowiedzieć się, jak coś zrobić na telefonie."
+        text: |
+          Wytłumacz mi krok po kroku, jak zrobić na telefonie: [czynność].
+          Mam telefon: Android.
           Pisz bardzo prosto.
           Po każdym kroku napisz, co powinienem/powinnam zobaczyć na ekranie.
 
