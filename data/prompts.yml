@@ -179,11 +179,16 @@ sections:
           Pisz bardzo prosto.
           Po każdym kroku napisz, co powinienem/powinnam zobaczyć na ekranie.
 
+      - number: 503
+        title: "Zakupy z chatem"
+        when: "Poproś chata o pomoc w zakupie nowego sprzętu elektronicznego."
+        markdown_file: "prompts/zakupy.md"
+
   - id: "nauka"
     title: "Zainteresowania i nauka"
     description: "Prompty do nauki, pisania wspomnień i rozwijania zainteresowań."
     prompts:
-      - number: 10
+      - number: 601
         title: "Nauka języka"
         when: "Użyj, gdy chcesz poćwiczyć język obcy."
         text: |
@@ -191,3 +196,13 @@ sections:
           Jestem osobą początkującą.
           Naucz mnie 10 przydatnych zwrotów w podróży.
           Potem zrób krótkie ćwiczenie.
+
+      - number: 602
+        title: "Planowanie wycieczki"
+        when: ""
+        markdown_file: "prompts/wycieczka.md"
+
+      - number: 603
+        title: "Jak dojechać do hotelu?"
+        when: ""
+        markdown_file: "prompts/dojazd.md"
