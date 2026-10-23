@@ -54,6 +54,7 @@ header {
 }
 
 .is-partial {
+    border-style: dashed;
     border-bottom: none;
     border-left: none;
     border-right: none;
