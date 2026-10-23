@@ -60,6 +60,10 @@ code {
     text-wrap: wrap;
 }
 
+.prompt-copy {
+    display: none;
+}
+
 .prompt-markdown {
     overflow-wrap: anywhere;
 }

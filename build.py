@@ -101,6 +101,7 @@ def load_markdown_prompt(prompt):
             strip=True,
         )
     )
+    prompt["text"] = source
 
 
 def render_index(data):

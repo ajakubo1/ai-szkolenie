@@ -29,7 +29,7 @@ async function copyText(text) {
 document.querySelectorAll('.copy-button').forEach((button) => {
     button.addEventListener('click', async () => {
         const card = button.closest('.prompt-card');
-        const promptText = card.querySelector('.prompt-text').innerText.trim();
+        const promptText = card.querySelector('.prompt-copy').innerText.trim();
         const originalText = 'Kopiuj prompt';
 
         try {

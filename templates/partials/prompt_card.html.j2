@@ -10,6 +10,8 @@
       {% else %}
         <pre class="prompt-text"><code>{{ prompt.text }}</code></pre>
       {% endif %}
+
+      <div class="prompt-copy"><code>{{ prompt.text }}</code></div>
     </div>
     {{ forms.button("Kopiuj prompt", class="copy-button") }}
   </div>
