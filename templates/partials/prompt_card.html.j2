@@ -1,4 +1,4 @@
-{% call forms.section(prompt.title, "prompt-number-" ~ prompt.number, class="prompt-card") %}
+{% call forms.section(prompt.title, "prompt-number-" ~ prompt.number, class="prompt-card", color='green', is_partial=true) %}
   <span class="prompt-number">Prompt {{ prompt.number }}</span>
   <p class="prompt-when">
     {{ prompt.when }}

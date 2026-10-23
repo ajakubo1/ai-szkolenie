@@ -25,14 +25,16 @@
     {% endfor %}
   {% endcall %}
 
-  {% call forms.section("Kategorie promptów", "category-card") %}
-    {% call forms.list(is_circle=false) %}
-      {% for section in sections %}
-        <li>
-          <a href="#{{ section.id }}">{{ section.title }}</a>
-        </li>
-      {% endfor %}
-    {% endcall %}
+  {% call forms.section("Kategorie promptów", "category-card", is_border=false) %}
+    <div class="margin">
+      {% call forms.list(is_circle=false) %}
+        {% for section in sections %}
+          <li>
+            <a href="#{{ section.id }}">{{ section.title }}</a>
+          </li>
+        {% endfor %}
+      {% endcall %}
+    </div>
   {% endcall %}
 
   {% for section in sections %}

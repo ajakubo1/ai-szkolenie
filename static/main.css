@@ -33,48 +33,91 @@ header {
     margin-bottom: 4rem;
 }
 
+.margin {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /*
 
     NES tweaks
 
 */
+:root {
+    --yellow: #f2c409;
+    --green: #76c442;
+    --red: #ce372b;
+    --border-black: black;
+
+    --text-black: #212529;
+    --link-blue: #007bff;
+}
+
+.is-partial {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.is-regular {
+    &, &::before, &::after {
+        border-color: var(--border-black);
+    }
+
+    a {
+        color: rgb(from var(--link-blue) r g b / 0.75);
+
+        & > span {
+            color: var(--link-blue);
+        }
+    }
+}
 
 .is-green {
     &, &::before, &::after {
-        border-color: #76c442;
+        border-color: var(--green);
     }
 
-    a, .title {
-        color: #76c442;
+    a {
+        color: rgb(from var(--green) r g b / 0.75);
+
+        & > span {
+            color: var(--green);
+        }
     }
 }
 
 .is-yellow {
     &, &::before, &::after {
-        border-color: #f2c409;
+        border-color: var(--yellow);
     }
 
-    a, .title {
-        color: #f2c409;
+    a {
+        color: rgb(from var(--yellow) r g b / 0.75);
+
+        & > span {
+            color: var(--yellow);
+        }
     }
 }
 
 .is-red {
     &, &::before, &::after {
-        border-color: #ce372b;
+        border-color: var(--red);
     }
 
     a {
-        color: rgb(from #ce372b r g b / 0.75);
+        color: rgb(from var(--red) r g b / 0.75);
 
         & > span {
-            color: #ce372b;
+            color: var(--red);
         }
     }
 }
 
 .nes-pixel-borders {
     border-style: none;
+    border-image-source: none;
 
     &::before, &::after {
         content: "";
@@ -95,6 +138,7 @@ header {
     }
 
     &::after {
+        z-index: -1;
         left: -4px;
         top: 0;
         border-left-width: 4px;
@@ -104,10 +148,56 @@ header {
     }
 }
 
+.pixel-button {
+    background-color: #fff;
+    color: #212529;
 
-section > .title > * {
-    margin-top: -0.4rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 6px 8px;
+    margin: 0.5rem;
+    box-shadow: inset -4px -4px gray;
+
+    &:focus {
+        box-shadow: inset -4px -4px rgba(173, 175, 188, 0.3);
+    }
+
+    &:active:not(.is-disabled) {
+        box-shadow: inset -4px -4px #adafbc;
+    }
+
+    &.is-disabled, &.is-disabled:hover, &.is-disabled:focus {
+        color: #212529;
+        cursor: not-allowed;
+        background-color: #d3d3d3;
+        box-shadow: inset -4px -4px #adafbc;
+        opacity: 0.6;
+    }
+
+    &.is-primary {
+        color: #fff;
+        background-color: #209cee;
+        box-shadow: inset -4px -4px #006bb3;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: #108de0;
+        }
+
+        &:hover::after {
+            box-shadow: inset -6px -6px #006bb3;
+        }
+
+        &:active:not(.is-disabled) {
+            box-shadow: inset -4px -4px #006bb3;
+        }
+    }
 }
+
 
 section {
     margin-top: 2rem;
@@ -116,10 +206,11 @@ section {
     > h2 {
         text-transform: uppercase;
     }
-}
 
-.nes-btn {
-    margin: 0.5rem;
+    &.nes-container > .title > * {
+        margin-top: -0.4rem;
+    }
+
 }
 
 .prompt-card {
@@ -145,39 +236,40 @@ code {
 
 .prompt-markdown {
     overflow-wrap: anywhere;
-}
 
-.prompt-markdown > :first-child {
-    margin-top: 0;
-}
+    & > :first-child {
+        margin-top: 0;
+    }
 
-.prompt-markdown > :last-child {
-    margin-bottom: 0;
-}
+    & > :last-child {
+        margin-bottom: 0;
+    }
 
-.prompt-markdown h1,
-.prompt-markdown h2,
-.prompt-markdown h3,
-.prompt-markdown h4,
-.prompt-markdown h5,
-.prompt-markdown h6 {
-    line-height: 1.1;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 1.1;
+    }
 
-.prompt-markdown ul,
-.prompt-markdown ol {
-    padding-left: 2rem;
-}
+    ul,
+    ol {
+        padding-left: 2rem;
+    }
 
-.prompt-markdown blockquote {
-    border-left: 4px solid #d3d3d3;
-    margin-left: 0;
-    padding-left: 1rem;
-}
+    blockquote {
+        border-left: 4px solid #d3d3d3;
+        margin-left: 0;
+        padding-left: 1rem;
+    }
 
-.prompt-markdown pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+    }
+
 }
 
 

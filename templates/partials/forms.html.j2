@@ -1,10 +1,12 @@
-{% macro section(title, id, class='', is_dark=false, is_border=true, color='default') %}
+{% macro section(title, id, class='', is_dark=false, is_border=true, color='default', is_partial=false) %}
   <section id="{{ id }}"
            class="{{ 'nes-container' if is_border }} with-title {{ id }} {{ class }}
                {{ 'is-dark' if color == 'dark' }}
                {{ 'is-green' if color == 'green' }}
                {{ 'is-red' if color == 'red' }}
-               {{ 'is-yellow' if color == 'yellow' }}"
+               {{ 'is-yellow' if color == 'yellow' }}
+               {{ 'is-regular' if color == 'default' }}
+              {{ 'is-partial' if is_partial }}"
            aria-labelledby="{{ id }}-title">
     <div class="title">
       <h2 id="{{ id }}-title"><a href="#{{ id }}">#<span>{{ title }}</span></a></h2>
@@ -21,7 +23,7 @@
   {# is-warning #}
   {# is-error #}
   {# is-disabled #}
-  <button class="nes-btn {{ type }} {{ class }}" type="button">
+  <button class="pixel-button nes-pixel-borders is-regular {{ type }} {{ class }}" type="button">
     <span>{{ title }}</span>
   </button>
 {% endmacro %}
