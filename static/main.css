@@ -33,14 +33,33 @@ header {
     margin-bottom: 4rem;
 }
 
+/*
+
+    NES tweaks
+
+*/
+
+.nes-container {
+    .is-green {
+        border-color: #76c442;
+    }
+
+    .is-yellow {
+        border-color: #f2c409;
+    }
+
+    .is-red {
+        border-color: #ce372b;
+    }
+}
+
 section > .title > * {
     margin-top: -0.4rem;
 }
 
-section, section.nes-container.is-rounded {
+section {
     margin-top: 2rem;
     margin-bottom: 1rem;
-
 
     > h2 {
         text-transform: uppercase;
@@ -60,9 +79,17 @@ code {
     text-wrap: wrap;
 }
 
+
+/*
+
+    MARKDOWN tweaks
+
+*/
+
 .prompt-copy {
     display: none;
 }
+
 
 .prompt-markdown {
     overflow-wrap: anywhere;
